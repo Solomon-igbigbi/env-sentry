@@ -1,0 +1,64 @@
+{
+  "name": "env-sentry",
+  "version": "0.1.0",
+  "description": "Keep .env.sample in sync with .env — strips values, preserves structure",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "bin": {
+    "env-sentry": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "tsc --noEmit && vitest run && tsup"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Solomon-igbigbi/env-sentry.git"
+  },
+  "homepage": "https://github.com/Solomon-igbigbi/env-sentry#readme",
+  "bugs": {
+    "url": "https://github.com/Solomon-igbigbi/env-sentry/issues"
+  },
+  "keywords": [
+    "env",
+    "dotenv",
+    "env-sample",
+    "sync",
+    "cli",
+    "nestjs"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "chokidar": "^3.6.0",
+    "commander": "^12.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0"
+  }
+}
