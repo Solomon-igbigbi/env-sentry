@@ -1,6 +1,6 @@
 {
-  "name": "env-sentry",
-  "version": "0.1.0",
+  "name": "@solomonigbigbi/env-sentry",
+  "version": "0.2.0",
   "description": "Keep .env.sample in sync with .env — strips values, preserves structure",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -19,7 +19,7 @@
     }
   },
   "bin": {
-    "env-sentry": "./dist/cli.js"
+    "env-sentry": "dist/cli.js"
   },
   "files": [
     "dist",

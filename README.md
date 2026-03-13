@@ -11,9 +11,9 @@ Developers forget to update `.env.sample` when adding new environment variables.
 ## Install
 
 ```bash
-npm install --save-dev env-sentry
+npm install --save-dev @solomonigbigbi/env-sentry
 # or
-npm install -g env-sentry
+npm install -g @solomonigbigbi/env-sentry
 ```
 
 ## CLI Usage
@@ -50,7 +50,7 @@ env-sentry --silent
 ## Programmatic API
 
 ```typescript
-import { sync, watch } from 'env-sentry';
+import { sync, watch } from '@solomonigbigbi/env-sentry';
 
 // One-shot
 const result = await sync({
